@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hover Effect</title>
+<style type="text/css">
+	body{
+		height: 100vh;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		overflow: hidden;
+	}
+	a{
+		text-decoration: none;
+		font-size: 40px;
+		background-color: deepskyblue;
+		color: #fff;
+
+		padding: 40px 80px;
+		border: 5px solid #000;
+
+		position: relative;
+
+		overflow: hidden;
+
+		display: block;
+		margin-bottom: 20px;
+	}
+	a::before{
+		content: 'Thank You';
+
+		width: 101%;
+		height: 100%;
+		background-color: steelblue;
+		color: #fff;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		/*transform: rotateY(90deg);*/
+		transform: rotateX(90deg);
+		transition: transform 0.3s;
+	}
+	a:hover::before{
+		/*transform: rotateY(0deg);*/
+		transform: rotateX(0deg);
+	}
+	button{
+		background: linear-gradient(
+			30deg,
+			red 30%,
+			black 70%
+		);
+		background-size: 7%;
+		color: #fff;
+		font-size: 40px;
+
+		padding: 40px 80px;
+		border: 5px solid #000;
+
+		transition: all 1s;
+	}
+	button:hover{
+		color: red;
+		background-size: 8%;
+		background-position: right;
+	}
+</style>
+</head>
+<body>
+	<div>
+		<a href="#">Hover Me</a>
+
+		<button type="button">Hover Me</button>
+	</div>
+</body>
+</html>
+
+<!-- 4lg -->
